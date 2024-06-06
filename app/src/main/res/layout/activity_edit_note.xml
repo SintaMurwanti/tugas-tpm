@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditNote">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Judul -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Edit Catatan Laundry"
+            android:textColor="#787676"
+            android:textSize="24sp" />
+
+        <!-- EditText untuk Tanggal -->
+        <EditText
+            android:id="@+id/editTextDateEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:focusable="false"
+            android:fontFamily="@font/poppinsregular"
+            android:hint="Pilih Tanggal"
+            android:inputType="none"
+            android:onClick="showDatePickerDialog" />
+
+        <!-- TextView dan Button untuk Jumlah Baju -->
+        <TextView
+            android:id="@+id/textViewClothes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Jumlah Baju:"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Button Pengurangan Jumlah Baju -->
+            <Button
+                android:id="@+id/buttonMinusBajuEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/biru"
+                android:text="-" />
+
+            <!-- TextView untuk Menampilkan Jumlah Baju -->
+            <TextView
+                android:id="@+id/textViewBajuCounterEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="0"
+                android:textSize="18sp" />
+
+            <!-- Button Penambahan Jumlah Baju -->
+            <Button
+                android:id="@+id/buttonPlusBajuEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/biru"
+                android:text="+" />
+
+        </LinearLayout>
+
+        <!-- TextView dan Button untuk Jumlah Celana -->
+        <TextView
+            android:id="@+id/textViewCelana"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Jumlah Celana:"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Button Pengurangan Jumlah Celana -->
+            <Button
+                android:id="@+id/buttonMinusCelanaEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/biru"
+                android:text="-" />
+
+            <!-- TextView untuk Menampilkan Jumlah Celana -->
+            <TextView
+                android:id="@+id/textViewCelanaCounterEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="0"
+                android:textSize="18sp" />
+
+            <!-- Button Penambahan Jumlah Celana -->
+            <Button
+                android:id="@+id/buttonPlusCelanaEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/biru"
+                android:text="+" />
+
+        </LinearLayout>
+
+        <!-- TextView dan Button untuk Jumlah Jaket -->
+        <TextView
+            android:id="@+id/textViewJaket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Jumlah Jaket:"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Button Pengurangan Jumlah Jaket -->
+            <Button
+                android:id="@+id/buttonMinusJaketEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/biru"
+                android:text="-" />
+
+            <!-- TextView untuk Menampilkan Jumlah Jaket -->
+            <TextView
+                android:id="@+id/textViewJaketCounterEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="0"
+                android:textSize="18sp" />
+
+            <!-- Button Penambahan Jumlah Jaket -->
+            <Button
+                android:id="@+id/buttonPlusJaketEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/biru"
+                android:text="+" />
+
+        </LinearLayout>
+
+        <!-- TextView dan Button untuk Jumlah Selimut -->
+        <TextView
+            android:id="@+id/textViewSelimut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Jumlah Selimut:"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Button Pengurangan Jumlah Selimut -->
+            <Button
+                android:id="@+id/buttonMinusSelimutEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/biru"
+                android:text="-" />
+
+            <!-- TextView untuk Menampilkan Jumlah Selimut -->
+            <TextView
+                android:id="@+id/textViewSelimutCounterEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="0"
+                android:textSize="18sp" />
+
+            <!-- Button Penambahan Jumlah Selimut -->
+            <Button
+                android:id="@+id/buttonPlusSelimutEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/biru"
+                android:text="+" />
+
+        </LinearLayout>
+
+        <!-- Button untuk Edit Catatan -->
+        <Button
+            android:id="@+id/buttonEditNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/biru"
+            android:text="Edit Catatan Laundry"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/buttonDeleteNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FF3838"
+            android:text="Hapus Catatan Laundry"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
